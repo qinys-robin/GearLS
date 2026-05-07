@@ -1,0 +1,31 @@
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_miim.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_rxethmac.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_txcounters.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_transmitcontrol.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_wishbone.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/timescale.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_txstatem.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_random.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_rxcounters.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_rxaddrcheck.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_macstatus.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_txethmac.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_receivecontrol.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_clockgen.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_maccontrol.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_registers.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_outputcontrol.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_crc.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_register.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_fifo.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_shiftreg.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_spram_256x32.v
+#read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/xilinx_dist_ram_16x32.v
+#read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_cop.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_defines.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_rxstatem.v
+read_verilog -nolatches /home/qinyusen23/CODES/PANDORA/RTLlib/ethernet/eth_top.v
+hierarchy -check -top eth_top
+proc -noopt; fsm; memory 
+techmap 
+stat

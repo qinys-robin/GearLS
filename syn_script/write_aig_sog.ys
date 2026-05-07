@@ -1,0 +1,10 @@
+flatten 
+abc -fast -g AND,OR,MUX,XOR 
+write_verilog -noattr ../netlist/ethernet/ethernet_noopt_sog.v 
+async2sync 
+dfflegalize -cell $_DFF_P_ 0 
+aigmap 
+write_blif ethernet.blif 
+dfflibmap -liberty ../asap7/asap7sc7p5t_SEQ_RVT_SS_nldm_220123.lib 
+abc -liberty ../asap7/asap7sc7p5t_RVT_SS_nldm.lib -constr IO_constr.txt 
+write_verilog -noattr ../netlist/ethernet/ethernet_noopt.v

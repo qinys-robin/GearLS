@@ -1,0 +1,3 @@
+read_blif ac97_ctrl.blif 
+st;ps;zero 
+write_aiger -s ac97_ctrl.aig

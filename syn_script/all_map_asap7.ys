@@ -1,0 +1,9 @@
+read_verilog ../aigers/s382.v
+read_liberty -ignore_miss_func ../asap7/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_liberty -ignore_miss_func ../asap7/asap7sc7p5t_RVT_FF_nldm.lib
+select -module s382
+proc
+techmap
+dfflibmap -liberty ../asap7/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+abc -liberty ../asap7/asap7sc7p5t_RVT_FF_nldm.lib -constr IO_constr.txt
+write_verilog -noattr -selected ../output/s382_a7.v

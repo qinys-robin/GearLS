@@ -1,0 +1,7 @@
+script read_and_hier.ys
+proc -noopt
+memory
+flatten
+techmap
+aigmap
+

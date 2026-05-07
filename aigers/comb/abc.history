@@ -1,0 +1,20 @@
+read aor3000
+read_aiger aor3000.aig
+topo
+buffer
+stime
+write_verilog aor3000.v
+read_aiger a3000.aig 
+read_lib ../../asap7/asap7sc7p5t_RVT_SS_nldm.lib 
+write_verilog a3000.v
+read spi.aig 
+read_lib ../../asap7/asap7sc7p5t_RVT_SS_nldm.lib
+topo; buffer
+write_verilog spi.v
+read jpeg.aig
+source jpeg.aig.script 
+source -s /home/qinyusen23//.abc.rc
+source -s abc.rc
+read spi.aig
+resyn2
+write spi_opt.aig
