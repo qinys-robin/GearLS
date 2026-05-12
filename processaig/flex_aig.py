@@ -1,7 +1,7 @@
 '''
 Author: Qin Yusen, qinys2001@163.com
 Date: 2025-03-03 10:22:35
-LastEditTime: 2025-10-27 20:04:14
+LastEditTime: 2026-05-12 10:47:10
 FilePath: /processaig/flex_aig.py
 Description: Dynamic storage form of AIG
 '''
@@ -11,7 +11,6 @@ import numpy as np
 from aiger.aig import Node, AndGate, Inverter, LatchIn, Input, ConstFalse
 import copy, time
 import attr
-import pymetis
 import networkx as nx
 
 @attr.frozen(auto_detect=True)

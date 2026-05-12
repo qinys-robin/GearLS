@@ -1,7 +1,7 @@
 '''
 Author: Qin Yusen
 email: qinys2001@163.com
-LastEditTime: 2025-10-27 20:26:03
+LastEditTime: 2026-05-12 10:50:12
 Description: 
 '''
 import torch
@@ -21,7 +21,6 @@ from typing import List, Dict, Any, Tuple, Optional
 
 from stateGCNandSeqEncode import RLStateExtractor
 from RLEnv import RLEnvironment
-from xgboost import Booster
 
 class PyGVecEnvWrapper(VecEnvWrapper):
     """
