@@ -162,15 +162,15 @@ def train_process(design_lists, cut_weight_lists, device, rwd = 'shaped', optim_
 
 def continue_train_process(checkpoint_path: str, design_lists, cut_weight_lists, device, rwd='shaped', optim_lr=1e-4, more_timesteps=500000):
     """
-    从一个保存的 checkpoint 恢复训练。
+    Resume training from a saved checkpoint.
 
-    :param checkpoint_path: 要加载的模型的 .zip 文件路径。
-    :param design_lists: 用于环境的设计列表。
-    :param cut_weight_lists: 用于环境的切割权重列表。
-    :param device: 用于训练的设备 (例如, 'cuda' 或 'cpu')。
-    :param rwd: 要使用的奖励方案 ('shaped' 或 'native')。
-    :param optim_lr: 新训练阶段的初始学习率。
-    :param more_timesteps: 额外要训练的时间步数。
+    :param checkpoint_path: Path to the saved model .zip file to load.
+    :param design_lists: List of designs used to construct the environments.
+    :param cut_weight_lists: List of cut-weight files corresponding to the designs.
+    :param device: Device to use for training (e.g., 'cuda' or 'cpu').
+    :param rwd: Reward scheme to use ('shaped' or 'native').
+    :param optim_lr: Initial learning rate for the resumed training stage.
+    :param more_timesteps: Additional timesteps to train.
     """
     train_envs, test_envs = make_envvec(design_lists, cut_weight_lists, device, rwd, train_num=12, test_num=4)
     policy_kw = make_policy()
